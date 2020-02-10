@@ -1,13 +1,13 @@
 {
     "version": "170",
-    "name": "updates",
+    "name": "updates-react",
     "requires": {
         "cockpit": "125"
     },
 
     "tools": {
         "ostree": {
-            "label": "Software Updates",
+            "label": "Software Updates R",
             "path": "index.html"
         }
     }
