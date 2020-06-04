@@ -119,8 +119,8 @@ function process_rpm_list(result) {
         half = half + 1;
 
     return {
-        rpms1: data.slice(0, half + 1),
-        rpms2: data.slice(half + 1),
+        'rpms-col1': data.slice(0, half + 1),
+        'rpms-col2': data.slice(half + 1),
     };
 }
 
@@ -393,6 +393,7 @@ class RPMOSTreeDBusClient {
         if (update)
             upgrade_checksum = this.resolve_nested(update, "checksum.v");
 
+        console.info('known_versions_for', os_name, remote, branch, deployments);
         for (let i = 0; i < deployments.length; i++) {
             const deployment = deployments[i];
             const checksum = this.resolve_nested(deployment, "checksum.v");
